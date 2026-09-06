@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>هدية لشهوده 💖</title>
+
+<style>
+
+/* =========================
+   الأساسيات
+========================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+
+  font-family:"Cairo", "Tahoma", sans-serif;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.8), transparent 25%),
+    radial-gradient(circle at 80% 80%, rgba(255,182,205,.5), transparent 30%),
+    linear-gradient(135deg,#ffe4ec,#ffd6e7,#fff0f5);
+
+  color:#6b2d4d;
+
+  text-align:center;
+
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+
+/* =========================
+   خلفية القلوب
+========================= */
+
+.heart{
+  position:fixed;
+
+  bottom:-50px;
+  left:0;
+
+  font-size:22px;
+
+  opacity:.75;
+
+  pointer-events:none;
+
+  z-index:0;
+
+  animation:
+    floatHeart linear forwards;
+}
+
+@keyframes floatHeart{
+
+  0%{
+    transform:
+      translateY(0)
+      translateX(0)
+      rotate(0deg)
+    scale(.8);
+
+    opacity:0;
+  }
+
+  15%{
+    opacity:.8;
+  }
+
+  100%{
+    transform:
+      translateY(-115vh)
+      translateX(40px)
+      rotate(360deg)
+    scale(1.3);
+
+    opacity:0;
+  }
+
+}
+
+
+/* =========================
+   الصفحات
+========================= */
+
+.page{
+
+  min-height:100vh;
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:30px 15px;
+
+  position:relative;
+
+  z-index:1;
+
+}
+
+
+/* =========================
+   الكارت
+========================= */
+
+.card{
+
+  width:100%;
+
+  max-width:560px;
+
+  padding:35px 32px;
+
+  background:
+    rgba(255,255,255,.78);
+
+  backdrop-filter:blur(12px);
+
+  -webkit-backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,.8);
+
+  border-radius:28px;
+
+  box-shadow:
+    0 20px 50px rgba(180,70,110,.18),
+    0 5px 15px rgba(0,0,0,.06);
+
+  animation:
+    cardAppear .8s ease;
+
+  position:relative;
+
+}
+
+
+/* لمعة صغيرة فوق الكارت */
+
+.card::before{
+
+  content:"💗";
+
+  position:absolute;
+
+  top:-20px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:42px;
+
+  height:42px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:white;
+
+  border-radius:50%;
+
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+  font-size:22px;
+
+}
+
+
+/* =========================
+   حركة الكارت
+========================= */
+
+@keyframes cardAppear{
+
+  from{
+
+    opacity:0;
+
+    transform:
+      translateY(25px)
+      scale(.94);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+
+/* =========================
+   الصفحة الأولى
+========================= */
+
+.first-text{
+
+  font-size:21px;
+
+  line-height:2;
+
+  font-weight:700;
+
+  margin:10px 0 0;
+
+  color:#71304f;
+
+}
+
+.first-text span{
+
+  display:block;
+
+  margin-top:8px;
+
+  font-size:17px;
+
+  font-weight:500;
+
+}
+
+
+/* =========================
+   الفيديو
+========================= */
+
+.video-container{
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  margin-bottom:22px;
+
+}
+
+video{
+
+  width:90%;
+
+  max-width:380px;
+
+  display:block;
+
+  border-radius:20px;
+
+  background:#000;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.18);
+
+}
+
+
+/* =========================
+   الرسالة
+========================= */
+
+.message{
+
+  margin:0;
+
+  font-size:17px;
+
+  font-weight:600;
+
+  line-height:2.15;
+
+  color:#5f2946;
+
+  text-align:right;
+
+}
+
+
+/* =========================
+   زرار
+========================= */
+
+button{
+
+  margin-top:25px;
+
+  padding:14px 30px;
+
+  border:none;
+
+  border-radius:50px;
+
+  background:
+    linear-gradient(135deg,#ff7aa2,#ff4f81);
+
+  color:white;
+
+  font-family:inherit;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 8px 20px rgba(255,79,129,.3);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+
+button:hover{
+
+  transform:
+    translateY(-3px)
+    scale(1.04);
+
+  box-shadow:
+    0 12px 25px rgba(255,79,129,.4);
+
+}
+
+
+button:active{
+
+  transform:scale(.96);
+
+}
+
+
+/* =========================
+   فاصل لطيف
+========================= */
+
+.divider{
+
+  margin:18px auto;
+
+  width:80px;
+
+  height:3px;
+
+  border-radius:10px;
+
+  background:#ff9fba;
+
+}
+
+
+/* =========================
+   الموبايل
+========================= */
+
+@media(max-width:600px){
+
+  .page{
+
+    min-height:100vh;
+
+    align-items:flex-start;
+
+    padding:
+      45px 12px
+      30px;
+
+  }
+
+
+  .card{
+
+    max-width:100%;
+
+    padding:
+      30px 18px
+      25px;
+
+    border-radius:24px;
+
+  }
+
+
+  .first-text{
+
+    font-size:18px;
+
+    line-height:2;
+
+  }
+
+
+  .first-text span{
+
+    font-size:15px;
+
+  }
+
+
+  video{
+
+    width:100%;
+
+    max-width:none;
+
+    border-radius:16px;
+
+  }
+
+
+  .message{
+
+    font-size:15px;
+
+    line-height:2.05;
+
+    text-align:right;
+
+  }
+
+
+  button{
+
+    width:auto;
+
+    min-width:180px;
+
+    padding:13px 22px;
+
+    font-size:15px;
+
+  }
+
+}
+
+
+/* =========================
+   الشاشات الصغيرة جدًا
+========================= */
+
+@media(max-width:380px){
+
+  .card{
+
+    padding:
+      28px 15px
+      22px;
+
+  }
+
+
+  .first-text{
+
+    font-size:17px;
+
+  }
+
+
+  .message{
+
+    font-size:14px;
+
+    line-height:2;
+
+  }
+
+
+  button{
+
+    font-size:14px;
+
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     الموسيقى
+========================= -->
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- =========================
+     الصفحة الأولى
+========================= -->
+
+<div id="page1" class="page">
+
+  <div class="card">
+
+    <p class="first-text">
+
+      انتي مش بس صحبتي
+      انتي اختي واغلى حد في حياتي يا شهوده 💖
+
+      <span>
+        حبيت اعملك حاجة بسيطة تعبر عن حبي ليكي 🌸
+      </span>
+
+    </p>
+
+    <div class="divider"></div>
+
+    <button onclick="showVideo()">
+      اضغطي هنا يا شهوده 💌
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     الصفحة الثانية
+========================= -->
+
+<div id="page2" class="page" style="display:none;">
+
+  <div class="card">
+
+
+    <!-- الفيديو -->
+
+    <div class="video-container">
+
+      <video controls playsinline>
+
+        <source
+          src="video.mp4.mp4"
+          type="video/mp4">
+
+        المتصفح لا يدعم تشغيل الفيديو.
+
+      </video>
+
+    </div>
+
+
+    <!-- الرسالة -->
+
+    <p class="message">
+
+      بحبك اوي وممتنة انك في حياتي يا اغلى شهوده،
+      انا عارفه انك بتفتحيه لما بتكوني متضايقه،
+      حبيت اقولك اني بحبك اوي اوي اوي.
+
+      <br><br>
+
+      انتي المكسب الوحيد من كل حاجه وحشه حصلتلي،
+      انتي الصاحب اللي كنت بتمنى الاقيه.
+
+      <br><br>
+
+      بتمنى اننا مهما يعدي بينا الوقت نفضل قريبين زي ما احنا
+      ومنتفرقش ابدا،
+      وتفضلي فاكره دايما مهما حصل اني معنديش اغلى منك
+      ولا اعز منك،
+      واني افديكي بروحي كمان.
+
+      <br><br>
+
+      انتي جيتي في وقت انا كنت مفكره اني مش هعديه
+      ولا هكون كويسه تاني،
+      قويتيني وسندتيني،
+      وكنتي ونعم الصاحب والسند
+      في ليالي وحشه كتير عيشناها سوا انا وانتي.
+
+      <br><br>
+
+      انا ممكن انسى كل حاجه حصلت،
+      بس عمري ماهنسى وقفتك جنبي،
+      خوفك عليا،
+      دعمك ليا في كل وقت
+      حتى وانتي مش قادره لده.
+
+      <br><br>
+
+      وكل الذكريات الجميله اللي عيشتها معاكي،
+      انا بدمع وانا بكتبلك الكلام ده
+      وبيجي في بالي كل حاجه عيشناها سوا.
+
+      <br><br>
+
+      بتمنى بتمنى مليون مره
+      تفضلي جنبي،
+      افضل متونسه بيكي عمري كله
+      ياكل حاجه حلوه في الدنيا.
+
+      <br><br>
+
+      بحبك اوي اوي 💖🌸
+
+    </p>
+
+
+    <!-- زر الرجوع -->
+
+    <button onclick="goBack()">
+      رجوع 💌
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   تشغيل الموسيقى
+========================= */
+
+window.onload = function(){
+
+  const music =
+    document.getElementById("music");
+
+  music.volume = 0.3;
+
+  /*
+    المتصفح ممكن يمنع التشغيل
+    التلقائي، لذلك لو منعها
+    هنسيبها عادي.
+  */
+
+  music.play().catch(()=>{});
+
+};
+
+
+
+/* =========================
+   فتح الصفحة الثانية
+========================= */
+
+function showVideo(){
+
+  document.getElementById("page1").style.display="none";
+
+  document.getElementById("page2").style.display="flex";
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+
+
+/* =========================
+   الرجوع
+========================= */
+
+function goBack(){
+
+  document.getElementById("page2").style.display="none";
+
+  document.getElementById("page1").style.display="flex";
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+
+
+/* =========================
+   القلوب المتحركة
+========================= */
+
+const hearts = [
+  "💖",
+  "💕",
+  "💗",
+  "💓",
+  "💞",
+  "🌸"
+];
+
+
+setInterval(()=>{
+
+  const heart =
+    document.createElement("div");
+
+  heart.classList.add("heart");
+
+  heart.innerHTML =
+    hearts[Math.floor(Math.random()*hearts.length)];
+
+
+  heart.style.left =
+    Math.random()*100 + "vw";
+
+
+  heart.style.fontSize =
+    (Math.random()*16 + 15) + "px";
+
+
+  heart.style.animationDuration =
+    (Math.random()*3 + 4) + "s";
+
+
+  document.body.appendChild(heart);
+
+
+  setTimeout(()=>{
+
+    heart.remove();
+
+  },7000);
+
+
+},450);
+
+</script>
+
+</body>
+</html>
+
